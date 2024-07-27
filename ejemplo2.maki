@@ -1,0 +1,17 @@
+; =============
+; RES = !NUM
+; =============
+
+; segmento de datos
+BEGIN-DATA
+        NUM=5        ; número a calcular el factorial  
+        RES=?        ; donde se guarda el resultado
+END-DATA
+
+BEGIN-CODE
+        MOV [NUM],AC
+BUCLE: MOV 3,RT
+        MUL 
+        MOV AC,[RES]
+        TERM
+END-CODE
